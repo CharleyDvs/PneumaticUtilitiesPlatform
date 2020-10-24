@@ -1,0 +1,36 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    height: 300px;
+    border: 2px solid blue;
+    border-radius: 16px;
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all ease .5s;
+    .card-title {
+        padding: 1.2rem;
+        border-radius: 16px;
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        background-color: blue;
+        color: white;
+        transform: skewX(-10deg);
+        h1 {
+            transform: skewX(10deg);
+        }
+    }
+    .series-info {
+        width: 80%;
+        margin: 10%;
+    }
+    &:hover {
+        transform: translateY(-12px);
+        box-shadow: 3px 3px 16px #8A959E;
+    }
+}

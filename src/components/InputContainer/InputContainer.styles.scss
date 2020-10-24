@@ -1,0 +1,30 @@
+.input-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100px;
+    height: 25px;
+    margin: 6px;
+    position: relative;
+    input {
+        width: 60px;
+        margin: 3px;
+    }
+    span {
+        margin-right: 5px;
+    }
+    i {
+        position: absolute;
+        right: -20px;
+        transform: scale(1.2);
+    }
+    .green {
+        color: green;
+    }
+    .red {
+        color: red;
+    }
+    .yellow {
+        color: yellow;
+    }
+}
