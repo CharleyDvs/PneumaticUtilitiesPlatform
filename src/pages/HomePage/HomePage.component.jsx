@@ -13,6 +13,7 @@ const HomePage = () => {
             <nav>
                 <ul>
                     <li onClick={() => history.push('./homologacion')}>Homologación de cilindros</li>
+                    <li onClick={() => history.push('./filtros')}>Selección de tren de filtraje</li>
                 </ul>
             </nav>
         </main>
