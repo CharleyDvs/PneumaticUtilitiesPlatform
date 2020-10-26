@@ -30,6 +30,15 @@ const CylinderDataChart = ({ chartId, chartSeries, addBoreSize, setCylinder, res
                                     if (boreNumber !== "-") {
                                         boreNumber = Math.abs(e.target.value)
                                         setCylinder(chartId, measurements[boreNumber])
+                                    } else {
+                                        let cylinderInit = {};
+                                        nomenclature.forEach(item => {
+                                            cylinderInit[item] = ""
+                                        });
+                                        threadNomenclature.forEach(item => {
+                                            cylinderInit[item] = ""
+                                        });
+                                        setCylinder(chartId, cylinderInit);
                                     }
                                     addBoreSize(boreNumber);
                                     resetResult();
