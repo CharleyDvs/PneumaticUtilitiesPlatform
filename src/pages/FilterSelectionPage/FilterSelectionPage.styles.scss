@@ -1,6 +1,12 @@
 .filter-selection-page {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     min-height: 100vh;
     position: relative;
+    .sup {
+        vertical-align: super;
+        font-size: smaller;
+    }
 }
