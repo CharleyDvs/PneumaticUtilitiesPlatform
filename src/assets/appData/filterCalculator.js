@@ -125,5 +125,3 @@ export const filterCalculator = (flowRate, airPressure, inletTemperature, ambien
     });
     return (correctedFlow);
 }
-
-// 2.2, .5, 40, 35

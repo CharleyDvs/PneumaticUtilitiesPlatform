@@ -5,7 +5,7 @@ import './CylinderDataChart.styles.scss';
 
 import InputContainer from '../InputContainer/InputContainer.component';
 
-import { cylinderData } from './CylinderData';
+import { cylinderData } from '../../assets/appData/cylinderData';
 import { addBoreSize, resetResult } from '../../redux/comparisonData/comparisonDataActions';
 import { setCylinder } from '../../redux/cylindersData/cylinderActions';
 

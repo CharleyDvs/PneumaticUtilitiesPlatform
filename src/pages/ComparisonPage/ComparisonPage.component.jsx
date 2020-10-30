@@ -7,7 +7,7 @@ import './ComparisonPage.styles.scss';
 import PageTitle from '../../components/PageTitle/PageTitle.component';
 import CylinderDataChart from '../../components/CylinderDataChart/CylinderDataChart.component';
 
-import { cylinderData } from '../../components/CylinderDataChart/CylinderData';
+import { cylinderData } from '../../assets/appData/cylinderData';
 import { addTolerance, addResult } from '../../redux/comparisonData/comparisonDataActions';
 
 const ComparisonPage = ({ cylinders, tolerance, addTolerance, addResult }) => {

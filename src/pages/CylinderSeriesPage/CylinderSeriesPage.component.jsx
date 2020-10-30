@@ -5,7 +5,7 @@ import './CylinderSeriesPage.styles.scss';
 import SeriesCard from '../../components/SeriesCard/SeriesCard.component';
 import PageTitle from '../../components/PageTitle/PageTitle.component';
 
-import { cylinderPreviewData } from './SeriesInfo';
+import { cylinderPreviewData } from '../../assets/appData/cylinderPreviewData';
 
 const CylinderSeries = () => {
     return (
