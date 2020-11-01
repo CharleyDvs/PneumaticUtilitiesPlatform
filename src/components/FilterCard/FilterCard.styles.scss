@@ -24,6 +24,7 @@
         align-items: center;
         width: 80%;
         margin-top: 1rem;
+        position: relative;
         .fas {
             transform: scale(1.5);
             opacity: .5;
@@ -32,6 +33,9 @@
             &:hover {
                 transform: scale(1.7);
                 opacity: 1;
+            }
+            &:active {
+                transform: scale(1.5);
             }
         }
         h3 {
@@ -42,6 +46,23 @@
             &:hover {
                 transform: scale(1.2);
                 opacity: 1;
+                &~.grade-explanation {
+                    opacity: 1;
+                }
+            }
+        }
+        .grade-explanation {
+            width: 200px;
+            height: 200px;
+            bottom: 50px;
+            color: #f4f4f4;
+            border-radius: 16px;
+            opacity: 0;
+            pointer-events: none;
+            transition: all ease 1s;
+            position: absolute;
+            &.red {
+                background-color: red;
             }
         }
         .red {
