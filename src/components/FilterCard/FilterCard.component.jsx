@@ -32,8 +32,8 @@ const FilterCard = ({ modelData }) => {
             </div>
             <p>{extraInfo}</p>
             <div className="technical-data">
-                <i class="fas fa-file-pdf"></i>
-                <i class="fas fa-clipboard" onClick={() => {
+                <i className="fas fa-file-pdf"></i>
+                <i className="fas fa-clipboard" onClick={() => {
                     copyModel(model)
                 }}></i>
                 <h3 className={gradeColor}>{filterGrade}</h3>

@@ -50,7 +50,7 @@ export const filterCalculator = (flowRate, airPressure, inletTemperature, ambien
                 35: .96,
                 40: .9
             },
-            240: {
+            370: {
                 25: 1.1,
                 30: 1.05,
                 32: 1,
@@ -99,7 +99,7 @@ export const filterCalculator = (flowRate, airPressure, inletTemperature, ambien
     const correctionFactorKeys = Object.keys(correctionFactors);
 
     correctionFactorKeys.forEach(key => {
-        const capacityValues = Object.keys(correctionFactors[key]).reverse();
+        const capacityValues = Object.keys(correctionFactors[key]).sort((a, b) => a - b).reverse();
         capacityValues.forEach(value => {
             if (flowRate <= value) {
                 correctionFactorValues[key] = correctionFactors[key][value]
@@ -113,13 +113,15 @@ export const filterCalculator = (flowRate, airPressure, inletTemperature, ambien
         calculatedFactor = 1.5
     }
 
-    let inletFlowValuesArray = Object.keys(inletFlowValues).sort((a, b) => a - b).reverse();
-    let correctedFlow;
+    let inletFlowValuesArray = Object.values(inletFlowValues).sort((a, b) => a - b).reverse();
+    let correctedFlow = 66;
+    const calculatedFlow = initialInletFlow / calculatedFactor
 
     inletFlowValuesArray.forEach(value => {
-        if ((initialInletFlow / calculatedFactor) < inletFlowValues[value]) {
-            correctedFlow = inletFlowValues[value];
+        if (calculatedFlow <= value) {
+            correctedFlow = value;
         }
     });
-    return (correctedFlow);
+    console.log(initialInletFlow / calculatedFactor)
+    return ([correctedFlow, calculatedFlow]);
 }

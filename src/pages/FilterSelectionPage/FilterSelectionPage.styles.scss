@@ -21,6 +21,10 @@
             display: flex;
             flex-direction: column;
             margin: .5rem;
+            select {
+                width: 4.5rem;
+                outline: none;
+            }
         }
     }
 }

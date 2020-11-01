@@ -84,7 +84,8 @@ const FilterSelectionPage = ({ addFilterData, filterData }) => {
                 <button
                     onClick={() => {
                         const correctedFlowRate = filterCalculator(inletFlow, airPressure, inletTemperature, ambientTemperature);
-                        addFilterData("correctedFlowRate", correctedFlowRate);
+                        addFilterData("correctedFlowRate", correctedFlowRate[0]);
+                        addFilterData("calculatedFlowRate", correctedFlowRate[1])
                     }}
                 >Calcular</button>
             </div>
