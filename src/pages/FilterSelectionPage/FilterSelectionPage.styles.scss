@@ -1,12 +1,26 @@
 .filter-selection-page {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100vw;
-    min-height: 100vh;
+    min-width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    flex-wrap: wrap;
     position: relative;
-    .sup {
-        vertical-align: super;
-        font-size: smaller;
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 300px;
+        margin: 2rem;
+        border: 2px solid blue;
+        border-radius: 16px;
+        .filter-input-container {
+            display: flex;
+            flex-direction: column;
+            margin: .5rem;
+        }
     }
 }

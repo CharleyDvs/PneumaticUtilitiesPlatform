@@ -1,0 +1,51 @@
+.filter-card {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    border-radius: 16px;
+    border: 2px solid blue;
+    margin: 1rem;
+    color: #4f4f4f;
+    transition: all ease .5s;
+    position: relative;
+    h3 {
+        opacity: .5;
+    }
+    .image-container {
+        height: 120px;
+    }
+    .technical-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin-top: 1rem;
+        .fas {
+            transform: scale(1.5);
+            opacity: .5;
+            transition: all ease .5s;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.7);
+                opacity: 1;
+            }
+        }
+        h3 {
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: all ease .5s;
+            opacity: .8;
+            &:hover {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+        .red {
+            color: red;
+        }
+    }
+}

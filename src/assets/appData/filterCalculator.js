@@ -113,9 +113,7 @@ export const filterCalculator = (flowRate, airPressure, inletTemperature, ambien
         calculatedFactor = 1.5
     }
 
-    console.log(initialInletFlow / calculatedFactor);
     let inletFlowValuesArray = Object.keys(inletFlowValues).sort((a, b) => a - b).reverse();
-    console.log(inletFlowValuesArray)
     let correctedFlow;
 
     inletFlowValuesArray.forEach(value => {
