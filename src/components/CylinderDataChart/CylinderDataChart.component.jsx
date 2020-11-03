@@ -5,8 +5,8 @@ import './CylinderDataChart.styles.scss';
 
 import InputContainer from '../InputContainer/InputContainer.component';
 
-import { cylinderData } from '../../assets/appData/cylinderData'; //Cylinder data with all the info of the models
-import { measureAdjustfunctions } from '../../assets/appData/measureAdjustFunctions'; //Fuctions to adjust cylinder dimensions under special conditions ex.: when you have a longer stroke than usual
+import { cylinderData } from '../../assets/appData/cylinderData'; // Cylinder data with all the info of the models
+import { measureAdjustfunctions } from '../../assets/appData/measureAdjustFunctions'; // Fuctions to adjust cylinder dimensions under special conditions ex.: when you have a longer stroke than usual
 import { addBoreSize, resetResult } from '../../redux/comparisonData/comparisonDataActions';
 import { setCylinder, addCylinderMeasurement } from '../../redux/cylindersData/cylinderActions';
 
@@ -35,8 +35,10 @@ const CylinderDataChart = ({ chartId, chartSeries, addBoreSize, boreSize, setCyl
                                             ...measurements[boreNumber],
                                             stroke: cylinders[chartId].stroke
                                         }
-                                        setCylinder(chartId, totalMeasurements) //this is made in order to set dimensions according to the data and preserving the stroke value
-                                        measureAdjustfunctions[chartId](cylinders[chartId], { boreSize: e.target.value })
+                                        setCylinder(chartId, totalMeasurements) // This is made in order to set dimensions according to the data and preserving the stroke value
+                                        if (totalMeasurements.stroke) {
+                                            measureAdjustfunctions[chartId](cylinders[chartId], { boreSize: e.target.value })
+                                        } // Finally, all the cylinder data is sent only if bore size and stroke values exist 
                                     } else {
                                         let cylinderInit = { stroke: cylinders[chartId].stroke };
                                         nomenclature.forEach(item => {
@@ -45,7 +47,7 @@ const CylinderDataChart = ({ chartId, chartSeries, addBoreSize, boreSize, setCyl
                                         threadNomenclature.forEach(item => {
                                             cylinderInit[item] = ""
                                         });
-                                        setCylinder(chartId, cylinderInit); //this cleans all the cylinder measurements but preserves the current stroke value
+                                        setCylinder(chartId, cylinderInit); // This cleans all the cylinder measurements but preserves the current stroke value
                                     }
                                     addBoreSize(boreNumber);
                                     resetResult();
