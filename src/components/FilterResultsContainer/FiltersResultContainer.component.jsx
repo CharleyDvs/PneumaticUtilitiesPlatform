@@ -42,7 +42,7 @@ const FiltersResultContainer = ({ correctedFlowRate, calculatedFlowRate, addFilt
                                     (calculatedFlowRate > correctedFlowRate * .8)
                                         ? (calculatedFlowRate > 50)
                                             ? <div className="chage-flowrate-container"><span>* No es posible subir la capacidad del secador, consulte con su asesor</span></div>
-                                            : <div className="chage-flowrate-container"><button onClick={adjustSize}>Subir capacidad</button><span>* Para tener un margen de seguridad hay que subir la capacidad del tren de filtraje</span></div>
+                                            : <div className="chage-flowrate-container"><button onClick={adjustSize}>Subir capacidad</button><span>* Para asegurar el correcto funcionamiento hay que subir la capacidad del tren de filtraje</span></div>
                                         : null
                                 }
                             </div>

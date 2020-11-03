@@ -3,7 +3,8 @@ import { COMPARISON_DATA_ACTION_TYPES } from './comparisonDataTypes';
 const InitialState = {
     tolerance: 0,
     resultData: {},
-    currentBoreSize: "-"
+    currentBoreSize: "-",
+    stroke: 0
 }
 
 export const comparisonDataReducer = (state = InitialState, action) => {
@@ -17,7 +18,7 @@ export const comparisonDataReducer = (state = InitialState, action) => {
             return {
                 ...state,
                 currentBoreSize: action.payload
-            }
+            };
         case COMPARISON_DATA_ACTION_TYPES.ADD_RESULT:
             return {
                 ...state,
