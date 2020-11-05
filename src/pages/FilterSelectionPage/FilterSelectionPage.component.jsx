@@ -8,7 +8,7 @@ import FiltersResultContainer from '../../components/FilterResultsContainer/Filt
 
 import { addFilterData } from '../../redux/filtersData/filtersActions';
 import { flowRateValues, inletTemperatureValues, ambientTemperatureValues, airPressureValues } from '../../assets/appData/filterInputValues';
-import { filterCalculator } from '../../assets/appData/filterCalculator';
+import { filterCalculator } from '../../assets/utils/filterCalculator';
 
 const FilterSelectionPage = ({ addFilterData, filterData }) => {
     const { inletFlow, flowRateUnit, inletTemperature, ambientTemperature, airPressure } = filterData;

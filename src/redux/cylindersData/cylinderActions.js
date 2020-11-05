@@ -8,4 +8,4 @@ export const addCylinderMeasurement = (cylinderName, nomenclature, value) => ({
 export const setCylinder = (cylinderName, obj) => ({
     type: CYLINDER_ACTION_TYPES.SET_CYLINDER,
     payload: { cylinderName, obj }
-});
+}); 
