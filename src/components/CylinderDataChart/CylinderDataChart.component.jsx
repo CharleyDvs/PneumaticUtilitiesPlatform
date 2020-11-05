@@ -46,7 +46,7 @@ const CylinderDataChart = ({ chartId, chartSeries, addBoreSize, boreSize, setCyl
                                         setCylinder(chartId, cylinderInit); // This cleans all the cylinder measurements but preserves the current stroke value
                                     }
                                     addBoreSize(boreNumber);
-                                    resetResult();
+                                    resetResult(); // Each change resets the result array, forcing the user to obtain a new array via the compare button
                                 }
                             }
                         }
@@ -68,7 +68,8 @@ const CylinderDataChart = ({ chartId, chartSeries, addBoreSize, boreSize, setCyl
                             boreSize,
                             stroke: e.target.value
                         }
-                        setCylinder(chartId, totalMeasurements);
+                        setCylinder(chartId, totalMeasurements); // This is made in order to set dimensions according to the data and preserving the bore size value
+                        resetResult(); // Each change resets the result array, forcing the user to obtain a new array via the compare button
                     }} />
                 </div>
                 {
