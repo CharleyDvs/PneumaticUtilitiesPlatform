@@ -20,7 +20,7 @@ export const cylinderReducer = (state = InitialState, action) => {
         case CYLINDER_ACTION_TYPES.SET_CYLINDER:
             {
                 const { cylinderName, obj } = action.payload;
-                const adjustedMeasures = measureAdjustfunctions[cylinderName](obj); //When an object with the cylinder dimensions is received, the value is passed to a function that changes the final measures
+                const adjustedMeasures = measureAdjustfunctions[cylinderName](obj, cylinderName); //When an object with the cylinder dimensions is received, the value is passed to a function that changes the final measures
                 return {
                     ...state,
                     [cylinderName]: {
