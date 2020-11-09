@@ -20,10 +20,10 @@ const InputContainer = ({ nomenclature, inputType, chartId, addCylinderMeasureme
     };
     return (
         <div className="input-container">
-            <span>{nomenclature}: </span>
+            <span><b>{nomenclature}: </b></span>
             {
                 (boreSize !== "-" && chartId !== "Cilindro")
-                    ? <p>{cylinders[chartId][nomenclature]}</p>
+                    ? <p>{cylinders[chartId][nomenclature]} <span>{typeof (cylinders[chartId][nomenclature]) === "number" ? "mm" : ""}</span> </p>
                     : <input
                         type={inputType}
                         placeholder={`${inputType === 'number' ? 'mm' : '-'}`}
