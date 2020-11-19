@@ -92,6 +92,12 @@ const CylinderDataChart = ({ chartId, chartSeries, addBoreSize, boreSize, setCyl
                         />
                     )
                 }
+                <div className="input-container btn">
+                    <i class="fas fa-magnet"></i>
+                    <div className={`button-container left`}>
+                        <button className={`option-button`}></button>
+                    </div>
+                </div>
             </div>
         </div>
     );

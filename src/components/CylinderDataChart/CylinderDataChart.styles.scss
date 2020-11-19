@@ -39,5 +39,33 @@
             position: absolute;
             top: -40px;
         }
+        .input-container.btn {
+            flex-direction: column;
+            position: relative;
+            .fas {
+                position: absolute;
+                left: 0;
+                top: 20px;
+                color: #444;
+                transform: rotate(15deg);
+            }
+            .button-container {
+                display: flex;
+                align-items: center;
+                justify-self: center;
+                align-self: center;
+                width: 40%;
+                height: 80%;
+                border-radius: 16px;
+                border: 2px solid #999;
+                background-color: #ccc;
+                button {
+                    border-radius: 16px;
+                    background-color: #999;
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+        }
     }
 }
